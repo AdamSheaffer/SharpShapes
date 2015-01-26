@@ -5,22 +5,36 @@ using System.Text;
 
 namespace SharpShapes
 {
-    public class Rectangle
+    public class Rectangle : Shape
     {
-        private int width;
-        public int Width 
+        public override int SidesCount
         {
-            get { return this.width; } 
-        
+            get { return 4; }
         }
 
-        private int height;
-        public int Height 
+        public override decimal Area()
+        {
+            return this.Width * this.Height;
+        }
+
+        public override decimal Perimeter()
+        {
+            return (this.Width * 2) + (this.Height * 2);
+        }
+
+        private decimal width;
+        public decimal Width 
+        {
+            get { return this.width; }   
+        }
+
+        private decimal height;
+        public decimal Height 
         {
             get { return this.height; } 
         }
 
-        public Rectangle(int width, int height)
+        public Rectangle(decimal width, decimal height)
         {
             if (width <= 0 || height <= 0)
             {
@@ -28,6 +42,16 @@ namespace SharpShapes
             }
             this.width = width;
             this.height = height;
+        }
+
+        public override void Scale(int percent)
+        {
+            if (percent <= 0)
+            {
+                throw new ArgumentException();
+            }
+            this.width = this.width * percent / 100;
+            this.height = this.height * percent / 100;
         }
     }
 }
