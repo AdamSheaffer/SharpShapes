@@ -50,8 +50,9 @@ namespace SharpShapes
             {
                 throw new ArgumentException();
             }
-            this.width = this.width * percent / 100;
-            this.height = this.height * percent / 100;
+            this.width = this.Width * percent / 100;
+            this.height = this.Height * percent / 100;
         }
+
     }
 }

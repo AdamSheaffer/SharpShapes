@@ -51,8 +51,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestSquare.cs" />
     <Compile Include="UnitTestRectangle.cs" />
-    <Compile Include="UnitTestShape.cs" />
+    <Compile Include="UnitTestShapes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
