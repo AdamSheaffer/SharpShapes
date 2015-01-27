@@ -11,9 +11,9 @@ namespace TestSharpShapes
         public void TestTrapezoidConstructor()
         {
             Trapezoid trap = new Trapezoid(8, 2, 4);
-            Assert.AreEqual(40, trap.Base1);
-            Assert.AreEqual(50, trap.Base2);
-            Assert.AreEqual(20, trap.Height);
+            Assert.AreEqual(8, trap.Base1);
+            Assert.AreEqual(2, trap.Base2);
+            Assert.AreEqual(4, trap.Height);
         }
 
         [TestMethod]
