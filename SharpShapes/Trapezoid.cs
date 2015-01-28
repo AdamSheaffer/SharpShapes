@@ -25,6 +25,10 @@ namespace SharpShapes
             get { return height; }
         }
 
+        public decimal AcuteAngle { get; private set; }
+
+        public decimal ObtuseAngle { get; private set; }
+
         public Trapezoid(decimal base1, decimal base2, decimal height) 
         {
             if (base1 == base2 || base1 <= 0 || base2 <= 0 || height <= 0)
@@ -35,6 +39,11 @@ namespace SharpShapes
             this.base1 = base1;
             this.base2 = base2;
             this.height = height;
+
+            decimal wingWidth = (Base1 - Base2) / 2;
+
+            this.AcuteAngle = Decimal.Round((decimal)(Math.Atan((double)(Height / wingWidth)) * (180.0 / Math.PI)), 2);
+            this.ObtuseAngle = 180 - this.AcuteAngle;
         }
 
         public override decimal Area()
@@ -57,9 +66,5 @@ namespace SharpShapes
             this.base2 = this.Base2 * percent / 100;
             this.height = this.Height * percent / 100;
         }
-
-        public object AcuteAngle { get; set; }
-
-        public object ObtuseAngle { get; set; }
     }
 }

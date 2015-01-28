@@ -19,17 +19,17 @@ namespace TestSharpShapes
         [TestMethod]
         public void TestTrapezoidConstructorAngles()
         {
-            Trapezoid trap = new Trapezoid(8, 2, 4);
-            Assert.AreEqual(60, trap.AcuteAngle);
-            Assert.AreEqual(120, trap.ObtuseAngle);
+            Trapezoid trap = new Trapezoid(8, 4, 2);
+            Assert.AreEqual(45, trap.AcuteAngle);
+            Assert.AreEqual(135, trap.ObtuseAngle);
         }
 
         [TestMethod]
         public void TestTrapezoidConstructorAngles2()
         {
             Trapezoid trap = new Trapezoid(20, 15, 2);
-            Assert.AreEqual((decimal)33.69, trap.AcuteAngle);
-            Assert.AreEqual((decimal)146.31, trap.ObtuseAngle);
+            Assert.AreEqual((decimal)38.66, trap.AcuteAngle);
+            Assert.AreEqual((decimal)141.34, trap.ObtuseAngle);
         }
 
         [TestMethod]
@@ -53,7 +53,6 @@ namespace TestSharpShapes
         public void TestTrapezoidConstructorSanityCheckHeight()
         {
             Trapezoid trap = new Trapezoid(50, 0, 40);
-
         }
 
         [TestMethod]
@@ -165,15 +164,15 @@ namespace TestSharpShapes
         [TestMethod]
         public void TestTrapezoidPerimeter()
         {
-            Trapezoid trap = new Trapezoid(4, 10, 4);
-            Assert.AreEqual(24, trap.Perimeter());
+            Trapezoid trap = new Trapezoid(8, 2, 4);
+            Assert.AreEqual(20, trap.Perimeter());
         }
 
         [TestMethod]
         public void TestBiggerTrapezoidPerimeter()
         {
-            Trapezoid trap = new Trapezoid(40, 100, 40);
-            Assert.AreEqual(240, trap.Perimeter());
+            Trapezoid trap = new Trapezoid(20, 15, 10);
+            Assert.AreEqual((decimal)55.62, trap.Perimeter());
         }
 
         [TestMethod]
