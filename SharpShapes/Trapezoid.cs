@@ -25,6 +25,11 @@ namespace SharpShapes
             get { return height; }
         }
 
+        public override void DrawOnCanvas(System.Windows.Controls.Canvas canvasName, int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
         public decimal AcuteAngle { get; private set; }
 
         public decimal ObtuseAngle { get; private set; }

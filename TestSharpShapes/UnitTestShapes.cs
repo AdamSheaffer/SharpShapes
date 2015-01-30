@@ -2,11 +2,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SharpShapes;
 using System.Drawing;
+using System.Media;
+using System.Windows.Controls;
+
 
 namespace TestSharpShapes
 {
     public class MyShape : Shape
     {
+        public override void DrawOnCanvas(System.Windows.Controls.Canvas canvasName, int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
         public override decimal Area()
         {
             throw new NotImplementedException();
