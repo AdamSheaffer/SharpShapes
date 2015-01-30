@@ -51,9 +51,16 @@ namespace SharpShapes
             return ((base1 + base2) / 2) * height;
         }
 
+        private decimal WingLength()
+        {
+            return (base1 - base2) / 2;
+        }
+
         public override decimal Perimeter()
         {
-            throw new NotImplementedException();
+            double squares = (double)(WingLength() * WingLength() + Height * Height);
+            decimal legLength = Decimal.Round((decimal)Math.Sqrt(squares), 2);
+            return base1 + base2 + 2 * legLength;
         }
 
         public override void Scale(int percent)
