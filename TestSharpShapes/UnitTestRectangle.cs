@@ -11,7 +11,7 @@ namespace TestSharpShapes
         public void TestRectangleConstructor()
         {
             Rectangle rectangle = new Rectangle(40, 50);
-            Assert.AreEqual(40, rectangle.Width);
+            Assert.AreEqual(40, rectangle.Base1);
             Assert.AreEqual(50, rectangle.Height);
         }
 
@@ -52,7 +52,7 @@ namespace TestSharpShapes
         {
             Rectangle rectangle = new Rectangle(10, 15);
             rectangle.Scale(200);
-            Assert.AreEqual(20, rectangle.Width);
+            Assert.AreEqual(20, rectangle.Base1);
             Assert.AreEqual(30, rectangle.Height);
         }
 
@@ -61,7 +61,7 @@ namespace TestSharpShapes
         {
             Rectangle rectangle = new Rectangle(10, 15);
             rectangle.Scale(150);
-            Assert.AreEqual((decimal) 15, rectangle.Width);
+            Assert.AreEqual((decimal) 15, rectangle.Base1);
             Assert.AreEqual((decimal) 22.5, rectangle.Height);
         }
 
@@ -70,7 +70,7 @@ namespace TestSharpShapes
         {
             Rectangle rectangle = new Rectangle(10, 15);
             rectangle.Scale(100);
-            Assert.AreEqual(10, rectangle.Width);
+            Assert.AreEqual(10, rectangle.Base1);
             Assert.AreEqual(15, rectangle.Height);
         }
 
@@ -79,7 +79,7 @@ namespace TestSharpShapes
         {
             Rectangle rectangle = new Rectangle(10, 15);
             rectangle.Scale(37);
-            Assert.AreEqual((decimal) 3.7, rectangle.Width);
+            Assert.AreEqual((decimal) 3.7, rectangle.Base1);
             Assert.AreEqual((decimal) 5.55, rectangle.Height);
         }
 
@@ -89,7 +89,7 @@ namespace TestSharpShapes
             Rectangle rectangle = new Rectangle(10, 15);
             rectangle.Scale(50);
             rectangle.Scale(200);
-            Assert.AreEqual((decimal)10, rectangle.Width);
+            Assert.AreEqual((decimal)10, rectangle.Base1);
             Assert.AreEqual((decimal)15, rectangle.Height);
         }
 

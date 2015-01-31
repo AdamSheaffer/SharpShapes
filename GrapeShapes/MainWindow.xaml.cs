@@ -81,7 +81,7 @@ namespace GrapeShapes
             int numOfArgs = ArgumentCountFor(className);
             Shape shape = InstantiateWithArguments(className, potentialArgs.Take(numOfArgs).ToArray());
              
-            shape.DrawOnCanvas(ShapeCanvas, 5, 5);
+            shape.DrawOnCanvas(ShapeCanvas, 100, 100);
         }
     }
 }
